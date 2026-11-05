@@ -1,0 +1,210 @@
+{
+  // ---------------------------------------------------------------------------------------------
+  // HOW TO EDIT THIS FILE (you can do it from the GitHub website or the GitHub mobile app)
+  //
+  //  Add a company:  add one line to "sources" with a link to its job board. Examples:
+  //      "https://jobs.lever.co/acme",
+  //      "https://boards.greenhouse.io/acme",
+  //      "https://jobs.ashbyhq.com/acme",
+  //      "https://apply.workable.com/acme",
+  //      "https://acme.wd5.myworkdayjobs.com/SiteName",   <- Workday careers page (copy the address of its job list)
+  //      "lever:acme",                         <- shorthand also works (greenhouse:/lever:/ashby:/workable:)
+  //  Every line except the last one in a list must end with a comma.
+  //  The company name shown in the email is taken from the link. To choose it yourself:
+  //      { "name": "Acme Corp", "url": "https://jobs.lever.co/acme" },
+  //  (Changing a company's name later makes its jobs look new once.)
+  //
+  //  Only India jobs from a global company:
+  //      { "name": "Acme", "url": "https://boards.greenhouse.io/acme", "locations": ["India"] },
+  //  ("India" also covers Bengaluru, Hyderabad, Pune, Mumbai, Gurugram, Chennai, Noida, Delhi ...;
+  //   you can list any other place too, e.g. "London".)
+  //
+  //  Pause a company without deleting it:  { "url": "https://jobs.lever.co/acme", "enabled": false }
+  //
+  //  Add a keyword: add a line to "keywords", e.g. "Kubernetes",
+  //  To match the job TITLE only (less noise):  { "term": "Azure", "scope": "title" },
+  //  (Words that appear in nearly every description - Azure, Python, SQL, AWS, "Generative AI" - are title-only below.
+  //   Workday companies give no descriptions, so all keywords match the job title only for them.
+  //   Delete the "scope" part to also search descriptions - expect many more, noisier results.)
+  //
+  //  Not sure a link works? Run the workflow with "dry_run" ticked: the log shows [ok] or [FAIL]
+  //  for every company. A bad line never stops the other companies; it is listed in the email instead.
+  // ---------------------------------------------------------------------------------------------
+
+  "keywords": [
+    "Applied AI Engineer",
+    "Applied Engineer",
+    ".NET",
+    "React",
+    "Angular",
+    { "term": "Azure",         "scope": "title" },
+    { "term": "Python",        "scope": "title" },
+    { "term": "Gen AI",        "scope": "title" },
+    { "term": "GenAI",         "scope": "title" },
+    { "term": "Generative AI", "scope": "title" },
+    { "term": "SQL",           "scope": "title" },
+    { "term": "AWS",           "scope": "title" },
+    { "term": "SRE",           "scope": "title" },
+    { "term": "DevOps",        "scope": "title" },
+    { "term": "Site Reliability", "scope": "title" }
+  ],
+
+  "seenRetentionDays": 60,
+
+  "sources": [
+    // ---- AI labs and AI-first companies (all locations) ----
+    "https://job-boards.greenhouse.io/anthropic",
+    { "name": "OpenAI",     "url": "https://jobs.ashbyhq.com/openai" },
+    "https://job-boards.greenhouse.io/databricks",
+    { "name": "Scale AI",   "url": "https://job-boards.greenhouse.io/scaleai" },
+    { "name": "Cognition",  "url": "https://jobs.ashbyhq.com/cognition" },
+    { "name": "ElevenLabs", "url": "https://jobs.ashbyhq.com/elevenlabs" },
+    { "name": "Perplexity", "url": "https://jobs.ashbyhq.com/perplexity" },
+    { "name": "Pinecone",   "url": "https://jobs.ashbyhq.com/pinecone" },
+    { "name": "Snorkel AI", "url": "https://job-boards.greenhouse.io/snorkelai" },
+    { "name": "Writer",     "url": "https://jobs.ashbyhq.com/writer" },
+    { "name": "Ramp",       "url": "https://jobs.ashbyhq.com/ramp" },
+
+    // ---- India-based startups and scale-ups ----
+    { "name": "Razorpay",   "url": "https://job-boards.greenhouse.io/razorpaysoftwareprivatelimited" },
+    { "name": "CRED",       "url": "https://jobs.lever.co/cred" },
+    "https://job-boards.greenhouse.io/groww",
+    "https://jobs.lever.co/meesho",
+    "https://jobs.lever.co/paytm",
+    "https://jobs.lever.co/zeta",
+    { "name": "Sarvam AI",  "url": "https://jobs.ashbyhq.com/sarvam" },
+    "https://job-boards.greenhouse.io/druva",
+    "https://jobs.lever.co/mindtickle",
+    "https://job-boards.greenhouse.io/prodigal",
+    "https://job-boards.greenhouse.io/konovo",
+    "https://job-boards.greenhouse.io/glance",
+    "https://job-boards.greenhouse.io/sigmoid",
+    { "name": "Observe.AI", "url": "https://job-boards.greenhouse.io/observeai" },
+    "https://jobs.ashbyhq.com/metaforms",
+    "https://jobs.ashbyhq.com/atlan",
+    "https://jobs.ashbyhq.com/composio",
+    { "name": "Exponent Energy", "url": "https://apply.workable.com/exponent-energy" },
+
+    // ---- Global companies with large India engineering teams (India jobs only) ----
+    { "name": "Okta",         "url": "https://job-boards.greenhouse.io/okta",         "locations": ["India"] },
+    { "name": "Zscaler",      "url": "https://job-boards.greenhouse.io/zscaler",      "locations": ["India"] },
+    { "name": "Zenoti",       "url": "https://job-boards.greenhouse.io/zenoti",       "locations": ["India"] },
+    { "name": "Payoneer",     "url": "https://job-boards.greenhouse.io/payoneer",     "locations": ["India"] },
+    { "name": "Five9",        "url": "https://job-boards.greenhouse.io/five9",        "locations": ["India"] },
+    { "name": "Rubrik",       "url": "https://job-boards.greenhouse.io/rubrik",       "locations": ["India"] },
+    { "name": "NICE",         "url": "https://job-boards.greenhouse.io/nice",         "locations": ["India"] },
+    { "name": "UiPath",       "url": "https://jobs.ashbyhq.com/uipath",               "locations": ["India"] },
+    { "name": "Toast",        "url": "https://job-boards.greenhouse.io/toast",        "locations": ["India"] },
+    { "name": "MongoDB",      "url": "https://job-boards.greenhouse.io/mongodb",      "locations": ["India"] },
+    { "name": "Appian",       "url": "https://job-boards.greenhouse.io/appian",       "locations": ["India"] },
+    { "name": "Celonis",      "url": "https://job-boards.greenhouse.io/celonis",      "locations": ["India"] },
+    { "name": "Agoda",        "url": "https://job-boards.greenhouse.io/agoda",        "locations": ["India"] },
+    { "name": "Stripe",       "url": "https://job-boards.greenhouse.io/stripe",       "locations": ["India"] },
+    { "name": "Roblox",       "url": "https://job-boards.greenhouse.io/roblox",       "locations": ["India"] },
+    { "name": "Snowflake",    "url": "https://jobs.ashbyhq.com/snowflake",            "locations": ["India"] },
+    { "name": "InMobi",       "url": "https://job-boards.greenhouse.io/inmobi",       "locations": ["India"] },
+    { "name": "Avathon",      "url": "https://job-boards.greenhouse.io/avathon",      "locations": ["India"] },
+    { "name": "SingleStore",  "url": "https://job-boards.greenhouse.io/singlestore",  "locations": ["India"] },
+    { "name": "GitLab",       "url": "https://job-boards.greenhouse.io/gitlab",       "locations": ["India"] },
+    { "name": "Pure Storage", "url": "https://job-boards.greenhouse.io/purestorage",  "locations": ["India"] },
+
+    // ---- More software / SaaS / data companies (India jobs only) ----
+    { "name": "Anaplan",      "url": "https://job-boards.greenhouse.io/anaplan",      "locations": ["India"] },
+    { "name": "Netskope",     "url": "https://job-boards.greenhouse.io/netskope",     "locations": ["India"] },
+    { "name": "Zinnia",       "url": "https://job-boards.greenhouse.io/zinnia",       "locations": ["India"] },
+    { "name": "Fivetran",     "url": "https://job-boards.greenhouse.io/fivetran",     "locations": ["India"] },
+    { "name": "Commvault",    "url": "https://job-boards.greenhouse.io/commvault",    "locations": ["India"] },
+    { "name": "ZoomInfo",     "url": "https://job-boards.greenhouse.io/zoominfo",     "locations": ["India"] },
+    { "name": "Elastic",      "url": "https://job-boards.greenhouse.io/elastic",      "locations": ["India"] },
+    { "name": "Twilio",       "url": "https://job-boards.greenhouse.io/twilio",       "locations": ["India"] },
+    { "name": "Netradyne",    "url": "https://job-boards.greenhouse.io/netradyne",    "locations": ["India"] },
+    { "name": "New Relic",    "url": "https://job-boards.greenhouse.io/newrelic",     "locations": ["India"] },
+    { "name": "Sumo Logic",   "url": "https://job-boards.greenhouse.io/sumologic",    "locations": ["India"] },
+    { "name": "Samsara",      "url": "https://job-boards.greenhouse.io/samsara",      "locations": ["India"] },
+    { "name": "GoDaddy",      "url": "https://job-boards.greenhouse.io/godaddy",      "locations": ["India"] },
+    { "name": "Harness",      "url": "https://job-boards.greenhouse.io/harnessinc",   "locations": ["India"] },
+    { "name": "Turing",       "url": "https://job-boards.greenhouse.io/turing",       "locations": ["India"] },
+    { "name": "TrueFoundry",  "url": "https://job-boards.greenhouse.io/truefoundry",  "locations": ["India"] },
+    { "name": "Sonatype",     "url": "https://jobs.lever.co/sonatype",                "locations": ["India"] },
+    { "name": "Coupa",        "url": "https://jobs.lever.co/coupa",                   "locations": ["India"] },
+    { "name": "Sophos",       "url": "https://jobs.lever.co/sophos",                  "locations": ["India"] },
+    { "name": "ClickHouse",   "url": "https://jobs.ashbyhq.com/clickhouse",           "locations": ["India"] },
+    { "name": "Gainsight",    "url": "https://jobs.ashbyhq.com/gainsight",            "locations": ["India"] },
+
+    // ---- Large tech / product / fintech companies on Workday (India jobs only; searched by keyword) ----
+    { "name": "Nvidia",         "url": "https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite",          "locations": ["India"] },
+    { "name": "Salesforce",     "url": "https://salesforce.wd12.myworkdayjobs.com/External_Career_Site",         "locations": ["India"] },
+    { "name": "Adobe",          "url": "https://adobe.wd5.myworkdayjobs.com/external_experienced",               "locations": ["India"] },
+    { "name": "Mastercard",     "url": "https://mastercard.wd1.myworkdayjobs.com/CorporateCareers",              "locations": ["India"] },
+    { "name": "PayPal",         "url": "https://paypal.wd1.myworkdayjobs.com/jobs",                              "locations": ["India"] },
+    { "name": "Visa",           "url": "https://visa.wd5.myworkdayjobs.com/Visa",                                "locations": ["India"] },
+    { "name": "Workday",        "url": "https://workday.wd5.myworkdayjobs.com/Workday",                          "locations": ["India"] },
+    { "name": "Broadcom",       "url": "https://broadcom.wd1.myworkdayjobs.com/External_Career",                 "locations": ["India"] },
+    { "name": "Cadence",        "url": "https://cadence.wd1.myworkdayjobs.com/External_Careers",                 "locations": ["India"] },
+    { "name": "Trimble",        "url": "https://trimble.wd1.myworkdayjobs.com/TrimbleCareers",                   "locations": ["India"] },
+    { "name": "Guidewire",      "url": "https://guidewire.wd5.myworkdayjobs.com/External",                       "locations": ["India"] },
+    { "name": "Zoom",           "url": "https://zoom.wd5.myworkdayjobs.com/Zoom",                                "locations": ["India"] },
+    { "name": "Sabre",          "url": "https://sabre.wd1.myworkdayjobs.com/SabreJobs",                          "locations": ["India"] },
+    { "name": "Target",         "url": "https://target.wd5.myworkdayjobs.com/targetcareers",                     "locations": ["India"] },
+    { "name": "Thomson Reuters","url": "https://thomsonreuters.wd5.myworkdayjobs.com/External_Career_Site",      "locations": ["India"] },
+    { "name": "Wolters Kluwer", "url": "https://wk.wd3.myworkdayjobs.com/External",                              "locations": ["India"] },
+    { "name": "S&P Global",     "url": "https://spgi.wd5.myworkdayjobs.com/SPGI_Careers",                        "locations": ["India"] },
+    { "name": "Gartner",        "url": "https://gartner.wd5.myworkdayjobs.com/EXT",                              "locations": ["India"] },
+    { "name": "FIS",            "url": "https://fis.wd5.myworkdayjobs.com/SearchJobs",                           "locations": ["India"] },
+    { "name": "Broadridge",     "url": "https://broadridge.wd5.myworkdayjobs.com/Careers",                       "locations": ["India"] },
+    { "name": "Nasdaq",         "url": "https://nasdaq.wd1.myworkdayjobs.com/Global_External_Site",              "locations": ["India"] },
+    { "name": "Equifax",        "url": "https://equifax.wd5.myworkdayjobs.com/External",                         "locations": ["India"] },
+    { "name": "TransUnion",     "url": "https://transunion.wd5.myworkdayjobs.com/TransUnion",                    "locations": ["India"] },
+    { "name": "BlackRock",      "url": "https://blackrock.wd1.myworkdayjobs.com/BlackRock_Professional",         "locations": ["India"] },
+    { "name": "State Street",   "url": "https://statestreet.wd1.myworkdayjobs.com/Global",                       "locations": ["India"] },
+    { "name": "LSEG",           "url": "https://lseg.wd3.myworkdayjobs.com/Careers",                             "locations": ["India"] },
+
+    // ---- Global capability centres (GCCs) in India: banks, insurers, retail, health, telecom, semiconductors, industrial tech ----
+    // (Workday-hosted; keywords match the job title only. India jobs only.)
+    { "name": "Wells Fargo",           "url": "https://wf.wd1.myworkdayjobs.com/WellsFargoJobs", "locations": ["India"] },
+    { "name": "Citi",                  "url": "https://citi.wd5.myworkdayjobs.com/2", "locations": ["India"] },
+    { "name": "Capital One",           "url": "https://capitalone.wd12.myworkdayjobs.com/Capital_One", "locations": ["India"] },
+    { "name": "Morgan Stanley",        "url": "https://ms.wd5.myworkdayjobs.com/External", "locations": ["India"] },
+    { "name": "Barclays",              "url": "https://barclays.wd3.myworkdayjobs.com/External_Career_Site_Barclays", "locations": ["India"] },
+    { "name": "Deutsche Bank",         "url": "https://db.wd3.myworkdayjobs.com/DBWebsite", "locations": ["India"] },
+    { "name": "Fidelity Investments",  "url": "https://fmr.wd1.myworkdayjobs.com/FidelityCareers", "locations": ["India"] },
+    { "name": "Vanguard",              "url": "https://vanguard.wd5.myworkdayjobs.com/vanguard_External", "locations": ["India"] },
+    { "name": "U.S. Bank",             "url": "https://usbank.wd1.myworkdayjobs.com/US_Bank_Careers", "locations": ["India"] },
+    { "name": "Allstate",              "url": "https://allstate.wd5.myworkdayjobs.com/allstate_Careers", "locations": ["India"] },
+    { "name": "Marsh McLennan",        "url": "https://mmc.wd1.myworkdayjobs.com/mmc", "locations": ["India"] },
+    { "name": "Lowe's",                "url": "https://lowes.wd5.myworkdayjobs.com/LWS_External_CS", "locations": ["India"] },
+    { "name": "Nike",                  "url": "https://nike.wd1.myworkdayjobs.com/nke", "locations": ["India"] },
+    { "name": "Maersk",                "url": "https://maersk.wd3.myworkdayjobs.com/maersk_Careers", "locations": ["India"] },
+    { "name": "Cigna",                 "url": "https://cigna.wd5.myworkdayjobs.com/cignaCareers", "locations": ["India"] },
+    { "name": "Verizon",               "url": "https://verizon.wd12.myworkdayjobs.com/verizon-careers", "locations": ["India"] },
+    { "name": "Intel",                 "url": "https://intel.wd1.myworkdayjobs.com/External", "locations": ["India"] },
+    { "name": "Applied Materials",     "url": "https://amat.wd1.myworkdayjobs.com/External", "locations": ["India"] },
+    { "name": "Analog Devices",        "url": "https://analogdevices.wd1.myworkdayjobs.com/External", "locations": ["India"] },
+    { "name": "KLA",                   "url": "https://kla.wd1.myworkdayjobs.com/Search", "locations": ["India"] },
+    { "name": "Marvell",               "url": "https://marvell.wd1.myworkdayjobs.com/marvellCareers", "locations": ["India"] },
+    { "name": "NXP",                   "url": "https://nxp.wd3.myworkdayjobs.com/Careers", "locations": ["India"] },
+    { "name": "PTC",                   "url": "https://ptc.wd1.myworkdayjobs.com/ptc", "locations": ["India"] },
+    { "name": "Equinix",               "url": "https://equinix.wd1.myworkdayjobs.com/External", "locations": ["India"] },
+    { "name": "Unisys",                "url": "https://unisys.wd5.myworkdayjobs.com/External", "locations": ["India"] },
+    { "name": "Boeing",                "url": "https://boeing.wd1.myworkdayjobs.com/EXTERNAL_CAREERS", "locations": ["India"] },
+    { "name": "GE HealthCare",         "url": "https://gehc.wd5.myworkdayjobs.com/GEHC_ExternalSite", "locations": ["India"] },
+    { "name": "Philips",               "url": "https://philips.wd3.myworkdayjobs.com/jobs-and-careers", "locations": ["India"] },
+    { "name": "Rockwell Automation",   "url": "https://rockwellautomation.wd1.myworkdayjobs.com/External_Rockwell_Automation", "locations": ["India"] },
+    { "name": "Caterpillar",           "url": "https://cat.wd5.myworkdayjobs.com/CaterpillarCareers", "locations": ["India"] },
+    { "name": "Carrier",               "url": "https://carrier.wd5.myworkdayjobs.com/Jobs", "locations": ["India"] },
+    { "name": "Johnson Controls",      "url": "https://jci.wd5.myworkdayjobs.com/jci", "locations": ["India"] },
+    { "name": "3M",                    "url": "https://3m.wd1.myworkdayjobs.com/Search", "locations": ["India"] },
+    { "name": "Thermo Fisher",         "url": "https://thermofisher.wd5.myworkdayjobs.com/thermofisherCareers", "locations": ["India"] },
+    { "name": "Danaher",               "url": "https://danaher.wd1.myworkdayjobs.com/danaherJobs", "locations": ["India"] },
+    { "name": "Medtronic",             "url": "https://medtronic.wd1.myworkdayjobs.com/medtronicCareers", "locations": ["India"] },
+    { "name": "Baxter",                "url": "https://baxter.wd1.myworkdayjobs.com/baxter", "locations": ["India"] },
+    { "name": "Stryker",               "url": "https://stryker.wd1.myworkdayjobs.com/strykerCareers", "locations": ["India"] },
+    { "name": "Abbott",                "url": "https://abbott.wd5.myworkdayjobs.com/abbottCareers", "locations": ["India"] },
+    { "name": "Johnson & Johnson",     "url": "https://jj.wd5.myworkdayjobs.com/jj", "locations": ["India"] },
+    { "name": "Hitachi",               "url": "https://hitachi.wd1.myworkdayjobs.com/hitachi", "locations": ["India"] },
+
+    // ---- Big employers: searched, not listed. Amazon / Microsoft can be narrowed by country / location ----
+    { "url": "https://www.amazon.jobs", "countryCodes": ["IND"] },
+    { "url": "https://apply.careers.microsoft.com", "location": "India" }
+  ]
+}
