@@ -202,7 +202,38 @@
     { "name": "Abbott",                "url": "https://abbott.wd5.myworkdayjobs.com/abbottCareers", "locations": ["India"] },
     { "name": "Johnson & Johnson",     "url": "https://jj.wd5.myworkdayjobs.com/jj", "locations": ["India"] },
     { "name": "Hitachi",               "url": "https://hitachi.wd1.myworkdayjobs.com/hitachi", "locations": ["India"] },
+    // ---- More AI / product companies (all locations) ----
+    { "name": "Cohere",      "url": "https://jobs.ashbyhq.com/cohere" },
+    { "name": "Notion",      "url": "https://jobs.ashbyhq.com/notion" },
+    { "name": "Replit",      "url": "https://jobs.ashbyhq.com/replit" },
+    { "name": "Supabase",    "url": "https://jobs.ashbyhq.com/supabase" },
+    { "name": "Harvey",      "url": "https://jobs.ashbyhq.com/harvey" },
+    { "name": "Deepgram",    "url": "https://jobs.ashbyhq.com/deepgram" },
+    { "name": "Glean",       "url": "https://job-boards.greenhouse.io/gleanwork" },
+    { "name": "Mistral AI",  "url": "https://jobs.lever.co/mistral" },
+    { "name": "Hugging Face","url": "https://apply.workable.com/huggingface" },
+    { "name": "Postman",     "url": "https://job-boards.greenhouse.io/postman" },
+    { "name": "ThoughtSpot", "url": "https://job-boards.greenhouse.io/thoughtspot" },
 
+    // ---- More global companies (India jobs only) ----
+    { "name": "Cloudflare",  "url": "https://job-boards.greenhouse.io/cloudflare",  "locations": ["India"] },
+    { "name": "Datadog",     "url": "https://job-boards.greenhouse.io/datadog",     "locations": ["India"] },
+    { "name": "Airbnb",      "url": "https://job-boards.greenhouse.io/airbnb",      "locations": ["India"] },
+    { "name": "Coinbase",    "url": "https://job-boards.greenhouse.io/coinbase",    "locations": ["India"] },
+    { "name": "Figma",       "url": "https://job-boards.greenhouse.io/figma",       "locations": ["India"] },
+    { "name": "Dropbox",     "url": "https://job-boards.greenhouse.io/dropbox",     "locations": ["India"] },
+    { "name": "Pinterest",   "url": "https://job-boards.greenhouse.io/pinterest",   "locations": ["India"] },
+    { "name": "Asana",       "url": "https://job-boards.greenhouse.io/asana",       "locations": ["India"] },
+    { "name": "Palantir",    "url": "https://jobs.lever.co/palantir",               "locations": ["India"] },
+    { "name": "Spotify",     "url": "https://jobs.lever.co/spotify",                "locations": ["India"] },
+
+    // ---- More Workday companies (India jobs only) ----
+    { "name": "Dell",        "url": "https://dell.wd1.myworkdayjobs.com/External",               "locations": ["India"] },
+    { "name": "Walmart",     "url": "https://walmart.wd5.myworkdayjobs.com/WalmartExternal",     "locations": ["India"] },
+    { "name": "Autodesk",    "url": "https://autodesk.wd1.myworkdayjobs.com/Ext",                "locations": ["India"] },
+    { "name": "Qualcomm",    "url": "https://qualcomm.wd5.myworkdayjobs.com/External",           "locations": ["India"] },
+    { "name": "HP",          "url": "https://hp.wd5.myworkdayjobs.com/ExternalCareerSite",       "locations": ["India"] },
+    { "name": "Western Digital", "url": "https://wdc.wd1.myworkdayjobs.com/WDC",                 "locations": ["India"] },
     // ---- Big employers: searched, not listed. Amazon / Microsoft can be narrowed by country / location ----
     { "url": "https://www.amazon.jobs", "countryCodes": ["IND"] },
     { "url": "https://apply.careers.microsoft.com", "location": "India" }
